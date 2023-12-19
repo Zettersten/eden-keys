@@ -1,13 +1,7 @@
 ﻿using EdenKeys.GameMechanics;
 using EdenKeys.Shared;
 using SharpHook;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EdenKeys.Client;
 
@@ -30,7 +24,8 @@ public class KeyExecutor
 
         this.executionRegistry.Register(new TargetAndFollow_F10(this.simulator));
         this.executionRegistry.Register(new SpamAOE_F11(this.simulator));
-        this.executionRegistry.Register(new Buffs_F12(this.simulator));
+        this.executionRegistry.Register(new Buffs_F12(this.simulator)); 
+        this.executionRegistry.Register(new TargetAndAttack_F9(this.simulator));
 
         this.executionRegistry.Register(new Char_V(this.simulator));
 
@@ -71,7 +66,7 @@ public class KeyExecutor
                 Thread.Sleep(50);
                 continue;
             }
-            
+
             var message = messageQueue
                 .Dequeue();
 

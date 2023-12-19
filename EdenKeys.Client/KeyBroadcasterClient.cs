@@ -55,7 +55,6 @@ public class KeyBroadcasterClient
 
                 var message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
 
-
                 try
                 {
                     if (message.Contains("}{"))
@@ -81,7 +80,7 @@ public class KeyBroadcasterClient
 
                             executor.EnqueueKey(keystrokeEvent);
                         }
-                    } 
+                    }
                     else
                     {
                         var keystrokeEvent = JsonSerializer
@@ -91,7 +90,6 @@ public class KeyBroadcasterClient
 
                         executor.EnqueueKey(keystrokeEvent);
                     }
-
                 }
                 catch (Exception ex)
                 {

@@ -46,7 +46,7 @@ public sealed class ExecutionRegistry
 
                 runner.RunLoop(token);
             }
-        });
+        }, token);
     }
 
     public void Unregister(ExecutionBase execution)

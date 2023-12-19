@@ -51,7 +51,6 @@ public class Buffs_F12 : ExecutionBase
             Thread.Sleep(50);
             simulator.SimulateKeyRelease(SharpHook.Native.KeyCode.VcLeftAlt);
             Thread.Sleep(10_250);
-
         };
     }
 }

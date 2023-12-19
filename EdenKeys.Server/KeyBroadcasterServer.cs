@@ -112,20 +112,24 @@ public class KeyBroadcasterServer
             case Keycode.VK_MENU:
                 modifier = KeystrokeModifiers.Alt;
                 return true;
+
             case Keycode.VK_LSHIFT:
             case Keycode.VK_RSHIFT:
             case Keycode.VK_SHIFT:
                 modifier = KeystrokeModifiers.Shift;
                 return true;
+
             case Keycode.VK_LCONTROL:
             case Keycode.VK_RCONTROL:
             case Keycode.VK_CONTROL:
                 modifier = KeystrokeModifiers.Control;
                 return true;
+
             case Keycode.VK_LWIN:
             case Keycode.VK_RWIN:
                 modifier = KeystrokeModifiers.Windows;
                 return true;
+
             default:
                 modifier = null;
                 return false;

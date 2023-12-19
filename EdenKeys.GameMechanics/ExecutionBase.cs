@@ -92,7 +92,6 @@ public abstract class ExecutionBase
 
                 Thread.Sleep(delayBetweenLoop);
             }
-
         });
     }
 }
